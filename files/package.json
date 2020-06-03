@@ -1,0 +1,15 @@
+{
+  "name": "newww",
+  "version": "1.0.0",
+  "description": "",
+  "main": "store.js",
+  "scripts": {
+    "start": "node newww/node.js"
+  },
+  "author": "jain",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mysql": "^2.18.1"
+  }
+}

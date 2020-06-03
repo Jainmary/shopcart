@@ -1,0 +1,31 @@
+
+
+          <div id="api"></div>
+        </body>
+    <script>
+    fetch("http://localhost:3000/products")
+    .then(response => {
+    if(!response) {
+    throw Error("error");
+    }
+    return response.json();
+    })
+    .then(data => {
+    const mydata = data.data
+    .map(product => {
+    return `
+    <div class ="all">
+
+    <p class="hel">${product.name}</p>
+    <p class= "hel">${product.price}</p>
+    </div></div>
+    </div> `;
+    })
+    .join("");
+    document.querySelector("#api").insertAdjacentHTML("afterbegin", mydata);
+    })
+    .catch(error => {
+    console.log(error);
+    });
+    </script>
+    </html>
